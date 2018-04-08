@@ -1,8 +1,8 @@
 {
-  "name": "Sails University",
+  "name": "SailsUniversity",
   "private": true,
   "version": "0.0.0",
-  "description": "a Sails CRUD application with Many to many relation",
+  "description": "a Sails application",
   "keywords": [],
   "dependencies": {
     "ejs": "2.3.4",
@@ -23,13 +23,17 @@
     "sails": "~0.12.13",
     "sails-disk": "~0.10.9",
     "sails-mongo": "^0.12.2",
-    "sails-postgresql": "^1.0.0"
+    "sails-postgresql": "^0.11.4"
   },
   "scripts": {
     "debug": "node debug app.js",
     "start": "node app.js"
   },
   "main": "app.js",
-  "author": "Lazar Jankovic",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/anonymous node/sails user/sails-university.git"
+  },
+  "author": "anonymous node/sails user",
   "license": ""
 }
