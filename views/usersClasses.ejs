@@ -1,4 +1,4 @@
-<h1 class="display-4">teachers</h1>
+<h1 class="display-4">students</h1>
 <table class="table table-striped">
     <thead>
         <tr>
@@ -8,17 +8,17 @@
         </tr>
     </thead>
     <tbody>
-        <% teachers.forEach(function(teacher){ %>
+        <% students.forEach(function(student){ %>
             <tr>
                 <td>
-                    <%= teacher.id %>
+                    <%= student.id %>
                 </td>
                 <td>
-                    <%= teacher.name %>
+                    <%= student.name %>
                 </td>
                 <td>
-                    <a href="/teacher/edit/<%= teacher.id %>" class="btn btn-primary">Edit</a>
-                    <form class="d-inline" action="/teacher/delete/<%= teacher.id %>" method="post">
+                    <a href="/student/edit/<%= student.id %>" class="btn btn-primary">Edit</a>
+                    <form class="d-inline" action="/student/delete/<%= student.id %>" method="post">
                         <input type="submit" value="Delete" class="btn btn-danger">
                     </form>
                 </td>

@@ -6,7 +6,6 @@
       </li>
       <li class="breadcrumb-item active">Edit</li>
     </ol>
-    <h1><%= JSON.stringify(student.teachers) %></h1>
     <h1 class="display-4">Edit student</h1>
     <form method="post" action="/student/update/<%= student.id %>">
       <div class="form-group">
@@ -35,6 +34,11 @@
               <%= teacher.className %>
             </td>
             <td>
+              <form class="d-inline" action="/student/<%= student.id %>/teachers/userClass" method="post">
+                <input type="hidden" name="studentId" value="<%= student.id %>" />
+                <input type="hidden" name="teacherId" value="<%= teacher.id%>" />
+                <input type="submit" value="All Classes" class="btn btn-primary">
+              </form>
               <form class="d-inline" action="/student/<%= student.id %>/teachers/add" method="post">
                 <input type="hidden" name="studentId" value="<%= student.id %>" />
                 <input type="hidden" name="teacherId" value="<%= teacher.id%>" />

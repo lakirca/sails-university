@@ -32,9 +32,15 @@ module.exports = {
       res.view('listStudent', { students: students });
     });
   },
-  userClass: function(req, res){
-    res.view('usersClasses');
-  },    
+  userClass: function (req, res) {
+    Student.findOne({ id: req.params.id }).exec(function (req, res) {
+      if (err) {
+        res.send(500, { error: 'Database Error' });
+      } else {
+        res.view('usersClasses', { student: students });
+      }
+    })
+  },
   create: function (req, res) {
     var name = req.body.name;
     Student.create({ name: name }).exec(function (err) {
