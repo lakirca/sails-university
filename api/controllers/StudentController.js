@@ -33,13 +33,8 @@ module.exports = {
     });
   },
   userClass: function (req, res) {
-    Student.findOne({ id: req.params.id }).exec(function (req, res) {
-      if (err) {
-        res.send(500, { error: 'Database Error' });
-      } else {
-        res.view('usersClasses', { student: students });
-      }
-    })
+    Student.findOne({ id: req.params.id }); 
+    res.view('usersClasses');
   },
   create: function (req, res) {
     var name = req.body.name;
