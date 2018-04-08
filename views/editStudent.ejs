@@ -34,7 +34,7 @@
               <%= teacher.className %>
             </td>
             <td>
-              <a href="/student/<%= student.id %>/teachers/list">List</a>
+              <a href="/student/<%= student.id %>/teachers/userClasses">List</a>
               <form class="d-inline" action="/student/<%= student.id %>/teachers/add" method="post">
                 <input type="hidden" name="studentId" value="<%= student.id %>" />
                 <input type="hidden" name="teacherId" value="<%= teacher.id%>" />
