@@ -1,4 +1,4 @@
-# PostBase
+# Sails University
 
 a [Sails](http://sailsjs.org) CRUD application to manage posts
 
