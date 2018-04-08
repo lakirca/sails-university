@@ -32,6 +32,9 @@ module.exports = {
       res.view('listStudent', { students: students });
     });
   },
+  userClass: function(req, res){
+    res.view('usersClasses');
+  },    
   create: function (req, res) {
     var name = req.body.name;
     Student.create({ name: name }).exec(function (err) {
