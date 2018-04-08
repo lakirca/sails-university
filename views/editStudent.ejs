@@ -6,7 +6,7 @@
       </li>
       <li class="breadcrumb-item active">Edit</li>
     </ol>
-    <h1><%= student.teachers %></h1>
+    <h1><%= JSON.stringify(student.teachers) %></h1>
     <h1 class="display-4">Edit student</h1>
     <form method="post" action="/student/update/<%= student.id %>">
       <div class="form-group">
