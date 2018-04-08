@@ -32,10 +32,6 @@ module.exports = {
       res.view('listStudent', { students: students });
     });
   },
-  userClass: function (req, res) {
-    Student.findOne({ id: req.params.id }); 
-    res.view('usersClasses');
-  },
   create: function (req, res) {
     var name = req.body.name;
     Student.create({ name: name }).exec(function (err) {
