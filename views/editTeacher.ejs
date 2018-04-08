@@ -1,0 +1,49 @@
+<div class="row">
+  <div class="col-sm-6">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item ">
+        <a href="/teacher/list">All Teachers</a>
+      </li>
+      <li class="breadcrumb-item active">Edit</li>
+    </ol>
+    <h1 class="display-4">Edit Teacher</h1>
+    <form method="post" action="/teacher/update/<%= teacher.id %>">
+      <div class="form-group">
+        <label for="name">name</label>
+        <input type="text" name="name" class="form-control" value="<%= teacher.name %>">
+      </div>
+      <div class="form-group">
+        <label for="className">Class</label>
+        <input type="text" name="className" class="form-control" value="<%= teacher.className %>">
+      </div>
+      <input type="submit" value="Submit" class="btn btn-primary">
+    </form>
+  </div>
+  <div class="col-md-6">
+    <h1 class="display-4">All students</h1>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% students.forEach(function(student){ %>
+          <tr>
+            <td>
+              <%= student.name %>
+            </td>
+            <td>
+              <form class="d-inline" action="/teacher/<%= teacher.id %>/students/add" method="post">
+                <input type="hidden" name="teacherId" value="<%= teacher.id %>" />
+                <input type="hidden" name="studentId" value="<%= student.id%>" />
+
+                <input type="submit" value="Teach" class="btn">
+              </form>
+            </td>
+          </tr>
+          <% }) %>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<h1 class="display-4">Attended Classes</h1>
+<table class="table table-striped">
+    <a class="btn btn-info" href="#" onclick="window.location.reload(true);">Get new Students</a>
+    <thead>
+        <tr>
+            <th>Teacher's Name</th>
+            <th>Class Name</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <% student.teachers.forEach(function(student){ %>
+            <tr>
+                <td>
+                    <strong>
+                        <%= student.name %>
+                    </strong>
+                </td>
+                <td>
+                    <%= student.className %>
+                </td>
+            </tr>
+            <% }) %>
+    </tbody>
+</table>
